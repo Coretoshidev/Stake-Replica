@@ -161,7 +161,7 @@ i {
 
 /*DETAILED SIDE MENU*/
 
-.stake-side-bar {
+.gambet-side-bar {
     width: 240px;
     min-width: 240px;
     max-width: 350px;
@@ -171,7 +171,7 @@ i {
     z-index: 99999;
 }
 
-.stake-side-bar img {
+.gambet-side-bar img {
     height: 14px;
     width: auto;
     margin-right: 5px;
@@ -654,7 +654,7 @@ i {
     position: relative;
 }
 
-.stake-big-logo img {
+.gambet-big-logo img {
     height: 32px;
     width: auto;
     margin: 0;
@@ -1270,7 +1270,7 @@ i {
     display: none;
 }
 
-.stake-mini-logo {
+.gambet-mini-logo {
     display: none;
 }
 
@@ -2256,12 +2256,12 @@ tbody .mc-event span {
     margin-bottom: 5px;
 }
 
-.stake-amount {
+.gambet-amount {
     height: 36px;
     width: 150px;
 }
 
-.stake-amount input {
+.gambet-amount input {
     height: 36px;
     width: 150px;
     border-radius: 5px;
@@ -2279,7 +2279,7 @@ tbody .mc-event span {
     position: relative;
 }
 
-.stake-amount .input-image img {
+.gambet-amount .input-image img {
     position: absolute;
     right: 10px;
 }
