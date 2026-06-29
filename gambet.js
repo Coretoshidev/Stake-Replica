@@ -31,7 +31,7 @@ $(document).ready(function(){
     
         // Changing Stake Logo Image and removing Search Text to free up space at the Top Section of the Stake Main Page
         const cashierSection = document.querySelector(".cashier"),
-        leftSideMenu = document.querySelector(".stake-side-bar");
+        leftSideMenu = document.querySelector(".gambet-side-bar");
         function clearTopSpace() {
             if (!cashierSection.classList.contains("minimize-cashier") 
             && !leftSideMenu.classList.contains("minimize")) {
@@ -283,7 +283,7 @@ $(document).ready(function(){
             });
             // Click Effect for Expand button
             minimizeMenu.addEventListener("click", function() {
-                document.querySelector(".stake-side-bar").classList.add("minimize");
+                document.querySelector(".gambet-side-bar").classList.add("minimize");
                 document.querySelector(".small-side-bar").style.display = "block";
 
                 $(".md-body").children(".extra-odds").css({"margin-left": "3%"});
@@ -372,7 +372,7 @@ $(document).ready(function(){
             
             // Click Effect for Expand button
             expandMenu.addEventListener("click", function() {
-                document.querySelector(".stake-side-bar").classList.remove("minimize");
+                document.querySelector(".gambet-side-bar").classList.remove("minimize");
                 document.querySelector(".small-side-bar").style.display = "none";
 
                 const cashierSection = document.querySelector(".cashier");
@@ -592,7 +592,7 @@ $(document).ready(function(){
 
                     // Adding Cashier zone, Altering High Rollers(Open Bets) section, changing the styles of some Elements and increasing Footer height
                     const cashierSection = document.querySelector(".cashier"),
-                    leftSideMenu = document.querySelector(".stake-side-bar");
+                    leftSideMenu = document.querySelector(".gambet-side-bar");
                     if (mo.classList.contains("md-active")) {
                         cashierSection.classList.remove("minimize-cashier");
    
@@ -1755,8 +1755,8 @@ $(document).ready(function(){
 
         // Shorter Width Match Day for smaller screen sizes
         function verticalMatchDay() {
-            $(".stake-mini-logo").css({"display": "block"});
-            $(".stake-big-logo").css({"display": "none"});
+            $(".gambet-mini-logo").css({"display": "block"});
+            $(".gambet-big-logo").css({"display": "none"});
 
             $(".bs-menu2").css({"display": "block", "width": "fit-content"});
             $(".menu2-right").css({"margin-top": "30px", "margin-left": "20px"});
@@ -1779,8 +1779,8 @@ $(document).ready(function(){
 
         // Longer Width Match Day for bigger screen sizes
         function horizontalMatchDay() {
-            $(".stake-mini-logo").css({"display": "none"});
-            $(".stake-big-logo").css({"display": "block"});
+            $(".gambet-mini-logo").css({"display": "none"});
+            $(".gambet-big-logo").css({"display": "block"});
 
             $(".bs-menu2").css({"display": "flex", "width": "100%"});
             $(".menu2-right").css({"margin": "0"});
@@ -1803,7 +1803,7 @@ $(document).ready(function(){
         
         // Adjustments to Elements as the browser undergoes resizing
 
-        const leftSideMenu = document.querySelector(".stake-side-bar"),
+        const leftSideMenu = document.querySelector(".gambet-side-bar"),
         cashierSection = document.querySelector(".cashier"),
         matchOdd = document.querySelectorAll(".match-odd"),
         max1300 = window.matchMedia("(max-width: 1300px) and (min-width: 760px)"),
@@ -1823,7 +1823,7 @@ $(document).ready(function(){
             };
 
             if (max760.matches) {
-                $(".stake-side-bar").addClass("minimize");
+                $(".gambet-side-bar").addClass("minimize");
                 $(".footer").css({"padding-bottom": "100px"});
                 
                 window.addEventListener("resize", () => {
@@ -1833,22 +1833,22 @@ $(document).ready(function(){
                             if (!leftSideMenu.classList.contains("mobile")
                             && !leftSideMenu.classList.contains("res-stake-lb")) {
                                 $(".small-side-bar").css({"display": "block"});
-                                $(".stake-side-bar").addClass("minimize");
+                                $(".gambet-side-bar").addClass("minimize");
                                 removeDarkBG();
                             } else if (leftSideMenu.classList.contains("mobile")
                             && leftSideMenu.classList.contains("res-stake-lb")) {
-                                $(".stake-side-bar").removeClass("minimize");
+                                $(".gambet-side-bar").removeClass("minimize");
                                 $(".small-side-bar").css({"display": "block"});
                                 responsiveDarkBG();
                             }
                         } else {
-                            $(".stake-side-bar").removeClass("res-stake-lb");
+                            $(".gambet-side-bar").removeClass("res-stake-lb");
                             
                             if (!leftSideMenu.classList.contains("mobile")) {
                                 $(".small-side-bar").css({"display": "block"});
-                                $(".stake-side-bar").addClass("minimize");
+                                $(".gambet-side-bar").addClass("minimize");
                             } else {
-                                $(".stake-side-bar").removeClass("minimize");
+                                $(".gambet-side-bar").removeClass("minimize");
                                 $(".small-side-bar").css({"display": "none"});
                             }
                         }
@@ -1860,7 +1860,7 @@ $(document).ready(function(){
                     }
                 });
             } else {
-                $(".stake-side-bar").removeClass("minimize");
+                $(".gambet-side-bar").removeClass("minimize");
                 $(".footer").css({"padding-bottom": "40px"});
             };
 
@@ -1897,7 +1897,7 @@ $(document).ready(function(){
             if (!cashierSection.classList.contains("minimize-cashier") 
             && !leftSideMenu.classList.contains("minimize") 
             && max1150.matches) {
-                $(".stake-side-bar").addClass("res-stake-lb");
+                $(".gambet-side-bar").addClass("res-stake-lb");
                 $(".small-side-bar").css({"display": "block"});
 
                 $(".tablet-dark-bg").css({"display": "block"});
@@ -1908,7 +1908,7 @@ $(document).ready(function(){
             else if (cashierSection.classList.contains("minimize-cashier") 
             && !leftSideMenu.classList.contains("minimize") 
             && max1150.matches) {
-                $(".stake-side-bar").addClass("res-stake-lb");
+                $(".gambet-side-bar").addClass("res-stake-lb");
                 $(".small-side-bar").css({"display": "block"});
                 
                 $(".tablet-dark-bg").css({"display": "block"});
@@ -1919,8 +1919,8 @@ $(document).ready(function(){
             else if (!cashierSection.classList.contains("minimize-cashier") 
             && leftSideMenu.classList.contains("minimize") 
             && max1150.matches) {
-                $(".stake-side-bar").removeClass("res-stake-lb");
-                $(".stake-side-bar").addClass("minimize");
+                $(".gambet-side-bar").removeClass("res-stake-lb");
+                $(".gambet-side-bar").addClass("minimize");
                 $(".tablet-dark-bg").css({"display": "none"});
             }
 
@@ -1928,7 +1928,7 @@ $(document).ready(function(){
             else if (cashierSection.classList.contains("minimize-cashier") 
             && leftSideMenu.classList.contains("minimize") 
             && max1150.matches) {
-                $(".stake-side-bar").removeClass("res-stake-lb");
+                $(".gambet-side-bar").removeClass("res-stake-lb");
                 $(".tablet-dark-bg").css({"display": "none"});
             }
 
@@ -1944,8 +1944,8 @@ $(document).ready(function(){
             $(".tablet-dark-bg").children(".popup-background").click(function(e){
                 $(".tablet-dark-bg").css({"display": "none"});
 
-                $(".stake-side-bar").removeClass("res-stake-lb");
-                $(".stake-side-bar").addClass("minimize");
+                $(".gambet-side-bar").removeClass("res-stake-lb");
+                $(".gambet-side-bar").addClass("minimize");
 
                 $(".small-side-bar").css({"display": "block"});
             });
@@ -1958,7 +1958,7 @@ $(document).ready(function(){
                 $(".small-side-bar").css({"display": "none"});
             };
 
-            $(".stake-side-bar").removeClass("res-stake-lb");
+            $(".gambet-side-bar").removeClass("res-stake-lb");
         };
 
 
@@ -2056,10 +2056,10 @@ $(document).ready(function(){
                 }
                 
                 if (!leftSideMenu.classList.contains("minimize")) {
-                    $(".stake-side-bar").addClass("res-stake-lb");
-                    $(".stake-side-bar").addClass("mobile");
+                    $(".gambet-side-bar").addClass("res-stake-lb");
+                    $(".gambet-side-bar").addClass("mobile");
                 } else {
-                    $(".stake-side-bar").removeClass("mobile");
+                    $(".gambet-side-bar").removeClass("mobile");
                 }
 
                 $(".footer").css({"padding-bottom": "100px"});
@@ -2071,22 +2071,22 @@ $(document).ready(function(){
                             if (!leftSideMenu.classList.contains("mobile")
                             && !leftSideMenu.classList.contains("res-stake-lb")) {
                                 $(".small-side-bar").css({"display": "block"});
-                                $(".stake-side-bar").addClass("minimize");
+                                $(".gambet-side-bar").addClass("minimize");
                                 removeDarkBG();
                             } else if (leftSideMenu.classList.contains("mobile")
                             && leftSideMenu.classList.contains("res-stake-lb")) {
-                                $(".stake-side-bar").removeClass("minimize");
+                                $(".gambet-side-bar").removeClass("minimize");
                                 $(".small-side-bar").css({"display": "block"});
                                 responsiveDarkBG();
                             }
                         } else {
-                            $(".stake-side-bar").removeClass("res-stake-lb");
+                            $(".gambet-side-bar").removeClass("res-stake-lb");
                             
                             if (!leftSideMenu.classList.contains("mobile")) {
                                 $(".small-side-bar").css({"display": "block"});
-                                $(".stake-side-bar").addClass("minimize");
+                                $(".gambet-side-bar").addClass("minimize");
                             } else {
-                                $(".stake-side-bar").removeClass("minimize");
+                                $(".gambet-side-bar").removeClass("minimize");
                                 $(".small-side-bar").css({"display": "none"});
                             }
                         }
@@ -2258,9 +2258,9 @@ $(document).ready(function(){
         // Opening Side Menu and Bet Slip on Tablets/Mobile devices
         function mobileTablet() {
             $(".tmm-menu").click(function() {
-                $(".stake-side-bar").addClass("res-stake-lb");
-                $(".stake-side-bar").removeClass("minimize");
-                $(".stake-side-bar").addClass("mobile");
+                $(".gambet-side-bar").addClass("res-stake-lb");
+                $(".gambet-side-bar").removeClass("minimize");
+                $(".gambet-side-bar").addClass("mobile");
             });
 
             $(".close-menu-image").mouseover(function() {
@@ -2275,9 +2275,9 @@ $(document).ready(function(){
             });
 
             $(".close-menu-image").click(function() {
-                $(".stake-side-bar").removeClass("res-stake-lb");
-                $(".stake-side-bar").addClass("minimize");
-                $(".stake-side-bar").removeClass("mobile");
+                $(".gambet-side-bar").removeClass("res-stake-lb");
+                $(".gambet-side-bar").addClass("minimize");
+                $(".gambet-side-bar").removeClass("mobile");
             });
 
             $(".tmm-betslip").click(function() {
